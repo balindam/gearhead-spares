@@ -1,10 +1,10 @@
 package com.backend.gearheadspares.service;
 
-import com.backend.gearheadspares.model.Product;
+import com.backend.gearheadspares.model.Products;
 
 import java.util.List;
 
 public interface ProductService {
 
-    List<Product> getAllProducts();
+    List<Products> getAllProducts();
 }

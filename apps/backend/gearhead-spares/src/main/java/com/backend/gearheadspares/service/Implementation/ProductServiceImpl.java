@@ -1,6 +1,6 @@
 package com.backend.gearheadspares.service.Implementation;
 
-import com.backend.gearheadspares.model.Product;
+import com.backend.gearheadspares.model.Products;
 import com.backend.gearheadspares.repository.ProductRepository;
 import com.backend.gearheadspares.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public List<Product> getAllProducts() {
+    public List<Products> getAllProducts() {
         return productRepository.findAll();
     }
 }

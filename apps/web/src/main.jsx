@@ -4,7 +4,7 @@ import {Provider as ReduxProvider} from 'react-redux';
 // import dotenv from 'dotenv';
 
 import App from './App.jsx'
-import './index.css'
+// import './index.css'
 import store from './redux/store.js';
 
 

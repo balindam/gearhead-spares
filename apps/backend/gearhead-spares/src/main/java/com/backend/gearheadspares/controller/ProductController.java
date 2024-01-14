@@ -1,6 +1,6 @@
 package com.backend.gearheadspares.controller;
 
-import com.backend.gearheadspares.model.Product;
+import com.backend.gearheadspares.model.Products;
 import com.backend.gearheadspares.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,8 +19,8 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAllProducts() {
-        List<Product> products = productService.getAllProducts();
+    public ResponseEntity<List<Products>> getAllProducts() {
+        List<Products> products = productService.getAllProducts();
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 }

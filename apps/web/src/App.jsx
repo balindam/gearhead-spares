@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import './App.css'
+// import './App.css'
+import RouterComponent from './Router'
+
 
 function App() {
 
   return (
-    <div>App</div>
+    <RouterComponent />    
   )
 }
 
