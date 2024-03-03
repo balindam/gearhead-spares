@@ -1,0 +1,24 @@
+
+._shopping-cart-container {
+    ._sc-content {
+        ._scc-heading {
+
+        }
+
+        ._scc-body {
+
+        }
+
+        ._scc-actions {
+            // background-color: red;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+._shopping-cart-item-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+}

@@ -1,6 +1,8 @@
 import React from 'react'
 import ActionButton from '../../components/common/ActionButton';
-import QuantityButton from '../../components/common/QuantityButton';
+import QuantityButton from '../../components/common/QuantityButton/QuantityButton';
+import { Typography } from '@mui/material';
+import './style.scss';
 
 const ShoppingCartItem = ({itemInfo}) => {
     const {itemImage, itemName, itemPrice, itemSKU, itemQuantity} = itemInfo;
@@ -10,27 +12,37 @@ const ShoppingCartItem = ({itemInfo}) => {
     return (
         <div className="_shopping-cart-item-container">
             <div className="_sci-image">
-
+                <img src={''} alt={itemName} />
             </div>
             <div className="_sci-details">
-
+                <Typography>{itemName}</Typography>
+                <Typography>{itemPrice}</Typography>
+                <Typography>{`SKU: ${itemSKU}`}</Typography>
             </div>
             <div className="_sci-quantity">
-                <QuantityButton />
+                <QuantityButton quantity={itemQuantity}/>
             </div>
         </div>
     )
 }
 
-const index = () => {
+const ShoppingCart = () => {
 
-    const [cartItems, setCartItems] = React.useState([]);
+    const [cartItems, setCartItems] = React.useState([
+        {
+            itemName: 'Motorcyles Gloves',
+            itemSKU: 'SKU-1',
+            itemPrice: '$45.5',
+            itemImage: '',
+            itemQuantity: 1
+        }
+    ]);
   return (
     <div className="_shopping-cart-container">
         {/* Header */}
         <div className="_sc-content">
             <div className="_scc-heading">
-                Shopping Cart
+                <Typography>Shopping Cart</Typography>
             </div>
             <div className="_scc-body">
                 {cartItems.map((item, index) => (
@@ -47,4 +59,4 @@ const index = () => {
   )
 }
 
-export default index
+export default ShoppingCart

@@ -4,7 +4,7 @@ import React from 'react'
 const ActionButton = ({buttonText, buttonAction, buttonTheme}) => {
   return (
     <div className="_action-btn-container">
-        <Button onClick={buttonAction}>{buttonText}</Button>
+        <Button variant="contained" onClick={buttonAction}>{buttonText}</Button>
     </div>
   )
 }
